@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+body {
+  overflow:hidden;
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+}
+section {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  h1 {
+    font-size:4rem;
+  }
+  h1, img {
+    max-width: 50%;
+  }
+}
