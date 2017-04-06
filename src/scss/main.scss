@@ -3,16 +3,32 @@ body {
   overflow:hidden;
   font-family:'Roboto', sans-serif;
   font-weight: 300;
+  min-height:100vh;
+  min-width:100vw;
 }
 section {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction: column;
-  h1 {
-    font-size:4rem;
+float:left;
+width:100%;
+clear:both;
+position: relative;
+  div {
+    width:25%;
+    padding-bottom: 25%;
+    float:left;
+    position: relative;
+
+    background: rgba(0,0,0, 0.2);
+    &:first-child {
+      width:50%;
+    }
+    &:first-child {
+      width:50%;
+    }
   }
-  h1, img {
-    max-width: 50%;
-  }
+}
+canvas {
+  position: absolute;
+  z-index: -1;
+  top:0;
+  left:-20px;
 }
