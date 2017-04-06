@@ -31,8 +31,10 @@ class Animations {
       this.wrap.find('.block').each(function(){
         let id = parseInt($(this).attr('data-id'))
         let animate = animates[id]
+
         $(this).hover(function() {
           TweenMax.to(animate,.2, {value: 2, onUpdate:function() {
+            console.log(`id is ${id}`);
             update(id)
           }})
         }, function() {
@@ -67,7 +69,7 @@ class Animations {
           that.scalePoints[i] = {x: that.points[i].x, y: that.points[i].y}
         }
         if(typeof block !== 'undefined') {
-          console.log(block);
+
           let index = block
           if(block > ((that.blocks.length/2)-1)) index++
           let size = animates[block].value * that.zoom
@@ -82,24 +84,6 @@ class Animations {
 
           that.scalePoints[index + 5].x = that.scalePoints[index + 5].x - size;
           that.scalePoints[index + 5].y = that.scalePoints[index + 5].y + size;
-
-          if(that.oldHover !== null) {
-            let index2 = that.oldHover
-            if(that.oldHover > ((blocks.length/2)-1)) index2++
-            let size2 = (1- animates[block].value) * that.zoom
-            that.scalePoints[index2].x = that.scalePoints[index2].x - size2;
-            that.scalePoints[index2].y = that.scalePoints[index2].y - size2;
-
-            that.scalePoints[index2 + 1].x = that.scalePoints[index2 + 1].x + size2;
-            that.scalePoints[index2 + 1].y = that.scalePoints[index2 + 1].y - size2;
-
-            that.scalePoints[index2 + 6].x = that.scalePoints[index2 + 1].x + size2;
-            that.scalePoints[index2 + 6].y = that.scalePoints[index2 + 1].y + size2;
-
-            that.scalePoints[index2 + 5].x = that.scalePoints[index2 + 5].x - size2;
-            that.scalePoints[index2 + 5].y = that.scalePoints[index2 + 5].y + size2;
-          }
-          that.scalePoints[2] = that.points[2]
           that.scalePoints[3] = that.points[3]
           that.scalePoints[7] = that.points[7]
           that.scalePoints[8] = that.points[8]
@@ -130,29 +114,27 @@ class Animations {
             let grd;
             if(!mobile) grd = ctx.createLinearGradient(0,0,canvas.width * .25,0)
             else grd = ctx.createLinearGradient(0,0,canvas.width * .5,0)
-            grd.addColorStop(0, "#09255c")
-            grd.addColorStop(1, "#123c79")
+            grd.addColorStop(0, "green")
+            grd.addColorStop(1, "green")
             ctx.fillStyle=grd
           }
           if(canvasId === 'canvas-home' && i === 1) {
             let grd;
             if(!mobile) grd = ctx.createLinearGradient(canvas.width *.25,0, canvas.width * .5, 0)
             else grd = ctx.createLinearGradient(canvas.width * .5,0,canvas.width,0)
-            grd.addColorStop(0, "#123c79")
-            grd.addColorStop(0, "#1a4e8b")
+            grd.addColorStop(0, "green")
+            grd.addColorStop(0, "green")
             ctx.fillStyle=grd
           }
           else ctx.fillStyle = that.blocks[i]
           ctx.beginPath()
           if (!mobile){
-            console.log(`scales are ${JSON.stringify(that.scalePoints[x])}`);
             ctx.moveTo( that.scalePoints[x].x, that.scalePoints[x].y );
             ctx.lineTo( that.scalePoints[x+1].x, that.scalePoints[x+1].y  );
             ctx.lineTo( that.scalePoints[x+6].x, that.scalePoints[x+6].y );
             ctx.lineTo( that.scalePoints[x+5].x , that.scalePoints[x+5].y );
           }
           else {
-            console.log(`and ${that.scalePoints[x]}`);
             ctx.moveTo( that.scalePoints[x].x, that.scalePoints[x].y );
             ctx.lineTo( that.scalePoints[x+1].x, that.scalePoints[x+1].y  );
             ctx.lineTo( that.scalePoints[x+4].x, that.scalePoints[x+4].y );
