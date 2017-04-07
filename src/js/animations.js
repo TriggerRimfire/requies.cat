@@ -1,9 +1,9 @@
 const $ = require('jquery') //EWW.
 const { TweenMax } = require('gsap')
 class Animations {
-  constructor($el, maxWidth) {
+  constructor($el, colors) {
     this.wrap = $el
-    this.blocks = []
+    this.blocks = colors || ['green', 'green', 'darkgreen', 'darkblue', 'darkred', 'darkgreen', 'green', 'green']
     this.offset = 0
     this.zoom = 10
     this.points = []
@@ -17,14 +17,12 @@ class Animations {
     let id = parseInt(el.attr('data-id'))
   }
   drawBlocks() {
-    console.log('test');
     let animates = [{value:0}, {value:0}, {value:0}, {value:0}, {value:0}, {value:0}, {value:0}, {value:0}]
     const canvas = this.wrap.find("[data-id='canvas']")[0]
     const canvasId = this.wrap.find("[data-id='canvas']").attr('id')
     if(canvas.getContext) {
       let mobile = false
       const ctx = canvas.getContext('2d')
-      this.blocks = ['green', 'green', 'darkgreen', 'darkblue', 'darkred', 'darkgreen', 'green', 'green']
       let realWidth = canvas.width
       let blockElement = document.getElementsByClassName('blocks')
       let that = this
@@ -34,7 +32,6 @@ class Animations {
 
         $(this).hover(function() {
           TweenMax.to(animate,.2, {value: 2, onUpdate:function() {
-            console.log(`id is ${id}`);
             update(id)
           }})
         }, function() {
