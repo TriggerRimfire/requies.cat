@@ -10399,7 +10399,7 @@ var Animations = function () {
           { x: canvas.width * .75, y: 0 }, // 3
           { x: canvas.width, y: 0 }, // 4
           { x: 0, y: canvas.height * .5 }, // 5
-          { x: canvas.width * .25, y: canvas.height * .5 }, // 6
+          { x: canvas.width * .25, y: canvas.height * .5 + that.offset }, // 6
           { x: canvas.width * .5 + that.offsetException, y: canvas.height * .5 }, // 7
           { x: canvas.width * .75, y: canvas.height * .5 - that.offsetException }, // 8
           { x: canvas.width, y: canvas.height * .5 }, // 9
@@ -10413,23 +10413,31 @@ var Animations = function () {
             that.scalePoints[i] = { x: that.points[i].x, y: that.points[i].y };
           }
           if (typeof block !== 'undefined') {
+            if (block !== 5) {
+              var index = block;
+              console.log(index);
+              if (block > that.blocks.length / 2 - 1) index++;
+              var size = animates[block].value * that.zoom;
+              if (index === 5) {
+                index = 4;
+                that.scalePoints[index + 1].x = that.scalePoints[index + 1].x - size;
+                that.scalePoints[index + 1].y = that.scalePoints[index + 1].y + size;
+                that.scalePoints[index + 3].x = that.scalePoints[index + 3].x - size;
+                that.scalePoints[index + 3].y = that.scalePoints[index + 3].y + size;
+                that.scalePoints[7] = that.points[7];
+                that.scalePoints[2] = that.points[2];
+              } else {
 
-            var index = block;
-            if (block > that.blocks.length / 2 - 1) index++;
-            var size = animates[block].value * that.zoom;
-            that.scalePoints[index].x = that.scalePoints[index].x - size;
-            that.scalePoints[index].y = that.scalePoints[index].y - size;
-
-            that.scalePoints[index + 1].x = that.scalePoints[index + 1].x + size;
-            that.scalePoints[index + 1].y = that.scalePoints[index + 1].y - size;
-
-            that.scalePoints[index + 2].x = that.scalePoints[index + 2].x + size;
-            that.scalePoints[index + 2].y = that.scalePoints[index + 2].y + size;
-
-            that.scalePoints[index + 3].x = that.scalePoints[index + 3].x - size;
-            that.scalePoints[index + 3].y = that.scalePoints[index + 3].y + size;
-            that.scalePoints[6] = that.points[6];
-            that.scalePoints[7] = that.points[7];
+                that.scalePoints[index + 1].x = that.scalePoints[index + 1].x + size;
+                that.scalePoints[index + 1].y = that.scalePoints[index + 1].y - size;
+                that.scalePoints[index + 6].x = that.scalePoints[index + 6].x + size;
+                that.scalePoints[index + 6].y = that.scalePoints[index + 6].y - size;
+                that.scalePoints[3] = that.points[3];
+                that.scalePoints[5] = that.points[5];
+                that.scalePoints[6] = that.points[6];
+                that.scalePoints[7] = that.points[7];
+              }
+            }
           }
           ctx.save();
           ctx.scale((canvas.width - 40) / canvas.width, (canvas.height - 40) / canvas.height);
