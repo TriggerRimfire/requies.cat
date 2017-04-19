@@ -10371,7 +10371,6 @@ var Animations = function () {
     this.zoom = 10;
     this.points = [];
     this.scalePoints = [];
-
     this.oldHover = null;
     this.offsetException = 0;
     this.maxThreshold = 1008;
@@ -11489,17 +11488,9 @@ request.put = function(url, data, fn){
 var $ = __webpack_require__(1);
 var Animations = __webpack_require__(2);
 var request = __webpack_require__(3);
-var colors = void 0;
 var blocks = $('#blocks');
-
-request.get("http://www.mocky.io/v2/58f61a12260000d01c4ada84").then(function (res) {
-  colors = res.body;
-  var anims = new Animations(blocks, colors);
-  anims.drawBlocks();
-}).catch(function (e) {
-  var anims = new Animations(blocks);
-  anims.drawBlocks();
-});
+var anims = new Animations(blocks, colors);
+anims.drawBlocks();
 
 /***/ }),
 /* 5 */
