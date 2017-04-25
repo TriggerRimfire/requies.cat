@@ -1,0 +1,39 @@
+// The main container class, modified from Bootstrap
+.container {
+  width:100%;
+  min-height:100vh;
+  margin:0; //Override Bootstrap margins
+  padding:0; //Override Bootstrap paddings
+  transform-style: preserve-3d;
+  perspective: 1px;
+}
+
+section {
+  width:100%;
+}
+
+header {
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+nav {
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+
+
+
+footer {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:5rem;
+}

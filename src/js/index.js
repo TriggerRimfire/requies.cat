@@ -1,4 +1,9 @@
 let $ = require('jquery') //eww
-const Animations = require('./animations')
-const anims = new Animations($('#blocks'))
-anims.drawBlocks()
+const nav = $('nav > ul > li > a')
+nav.hover(function() {
+  $(":first-child", nav).css("display", "block");
+})
+
+$(":first-child", nav).hover(function(){
+  $(this).css("display", "block")
+})

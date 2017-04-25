@@ -1,0 +1,16 @@
+body {
+  background:$foppen-darkblue;
+}
+
+::selection {
+  background: $foppen-red; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $foppen-red; /* Gecko Browsers */
+}
+
+hr {
+  border:1px solid $foppen-red;
+  width:5%;
+  margin-top:10px;
+}

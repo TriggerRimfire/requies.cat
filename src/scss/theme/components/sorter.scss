@@ -1,0 +1,28 @@
+.sorter {
+  width:auto;
+  text-align: center;
+  p:active {
+    border:2px solid $foppen-red;
+    text-decoration: none;
+  }
+  p:hover {
+    border:2px solid $foppen-lightgrey;
+    text-decoration: none;
+    color:$white;
+  }
+  p {
+    float:left;
+    line-height:1.15;
+    margin:0;
+    border:2px solid $white;
+    padding:.6rem;
+    font-family:MuseoBold;
+    text-transform: uppercase;
+    cursor:pointer;
+    text-decoration: none;
+    margin-right:1rem;
+    &:last-child {
+      margin-right:0;
+    }
+  }
+}

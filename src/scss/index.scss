@@ -1,0 +1,134 @@
+/*
+ * Foppen SCSS Theme
+ *
+ * STYLE GUIDE
+ *
+ * Do not:
+ *  use IDs
+ *  use static units unless you really have to
+ *
+ * Avoid:
+ *  using absolute positioning outside of the parent scope
+ *  using divs, stay semantic to HTML5
+ *
+ * Do:
+ *  use correct HTML5 tags such as section, article, nav, header, footer
+ *  use flexbox for positioning
+ *
+*/
+
+//load the base modules
+@import "base/reset.scss"; //Reset the browser styling to a default
+@import "vendor/bootstrap.scss"; //Load our base
+@import "base/variables.scss";  //Variables for colors, later will contain grid variables
+@import "base/typography.scss"; //What the name implies or whatever
+@import "theme/layout.scss"; //To set up basic flex behaviour
+@import "theme/base.scss"; //This contains setting base colors for now
+
+//load our layout components
+@import "theme/components/header.scss";
+@import "theme/components/nav.scss";
+@import "theme/components/submenu.scss";
+
+@import "theme/components/section.scss";
+@import "theme/components/menu-blocks.scss";
+@import "theme/components/image-section.scss";
+@import "theme/components/footer.scss";
+@import "theme/components/grid.scss";
+@import "theme/components/image-table.scss";
+@import "theme/components/other-products.scss";
+@import "theme/components/highlight-block.scss";
+
+//load our style components
+@import "theme/components/button.scss";
+@import "theme/components/sorter.scss";
+@import "theme/components/input.scss";
+//load our utils/mixins/helpers
+@import "theme/helpers/scrollbar.scss"; //Scrollbar styling
+@import "theme/helpers/bootstrap-center.scss"; //Centering helpers for Bootstrap3, when using Bootstrap4, use justify-content-center!
+@import "theme/helpers/shadow.scss";
+@import "theme/helpers/align.scss";
+
+
+
+
+
+
+.cow {
+  height:80vh;
+  width:100%;
+  background: #ffffff;
+  display:flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  .head {
+    width:200px;
+    height:200px;
+    background: #999;
+    position: absolute;
+    z-index:2;
+    border-radius: 50%;
+
+  }
+  .earleft {
+    width:100px;
+    height:100px;
+    position: absolute;
+    z-index:1;
+    left:700px;
+    top:175px;
+    transform: rotate(12deg);
+    background: black;
+  }
+  .earright {
+    width:100px;
+    height:100px;
+    position: absolute;
+    z-index:1;
+    left:778px;
+    top:175px;
+    transform: rotate(-12deg);
+    background: black;
+  }
+  .eyeleft {
+    width:50px;
+    height:50px;
+    position: absolute;
+    z-index:3;
+    left:720px;
+    top:230px;
+    background: black;
+    border-radius: 50%;
+    .eyeinner {
+      background: white;
+      width:25px;
+      height:25px;
+      position: absolute;
+      border-radius: 50%;
+      left:12px;
+      top:12px;
+      z-index:4;
+    }
+  }
+  .eyeright {
+    width:50px;
+    height:50px;
+    position: absolute;
+    z-index:3;
+    left:805px;
+    top:230px;
+    background: black;
+    border-radius: 50%;
+    .eyeinner {
+      background: white;
+      width:25px;
+      height:25px;
+      position: absolute;
+      border-radius: 50%;
+      left:12px;
+      top:12px;
+      z-index:4;
+    }
+  }
+}

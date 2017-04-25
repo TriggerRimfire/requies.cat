@@ -1,0 +1,14 @@
+.other-products {
+  width:100%;
+  position: relative;
+  img.bg {width:100%;}
+  .products {
+    position: absolute;
+    top:0vh;
+    width: 100%;
+    article {
+      height:300px;
+      width:300px;
+    }
+  }
+}

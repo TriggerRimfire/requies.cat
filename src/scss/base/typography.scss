@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Museo;
+    src: url(https://killing.is-serious.business/638a70.ttf);
+}
+@font-face {
+    font-family: MuseoBold;
+    src: url(https://killing.is-serious.business/69fecb.otf);
+}
+
+html, body {
+  font-family:Museo;
+  font-size:16px;
+  line-height:1.15;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:MuseoBold;
+}
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+ul li {
+  font-family:Museo;
+  font-size:1.1rem;
+}
+p {
+  color:$white;
+}
+article.content p {
+
+}
+ul {
+  list-style:none;
+  p {
+    width:100%;
+  }
+  li {
+    color:$white;
+    padding-left:1rem;
+    text-indent: -.7rem;
+    margin-bottom:1rem;
+    line-height:1.5rem;
+    font-size:.9rem;
+  }
+  li:last-child {
+    margin-bottom:0;
+  }
+  li::before {
+    content: "• ";
+    color:$foppen-red;
+  }
+}
+
+a {
+  color:$white;
+  text-decoration:underline;
+  &:hover {
+    color:$foppen-red;
+  }
+}

@@ -1,0 +1,92 @@
+.section-content {
+  width:100%;
+  max-width: 1500px;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top:5rem;
+  h1 {
+    color:$white;
+    font-size: 2rem;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    margin-bottom:0;
+  }
+  h2, h3 {
+    color:$white;
+    font-size:1.8rem;
+    margin:0;
+    padding:0;
+    margin-top:6rem;
+  }
+
+  article.content {
+    width:60%;
+    margin-bottom:3rem;
+    .when-designers-decide-a-list-shouldnt-look-like-a-list-class {
+      text-align: left;
+      margin-top:3rem;
+      h3 {
+        text-align: left;
+      }
+      hr {
+        border: 1px solid $foppen-lightgrey;
+        width:50%;
+        margin: 1rem 0 1rem 0;
+      }
+      ul {
+        li {
+          &::before {
+            content:"";
+          }
+        }
+      }
+    }
+    p {
+      margin:0 0 1.5rem 0;
+      margin:0 auto 1.5rem auto;
+    }
+    h2, h3, h4, h5, h6 {
+      margin:3rem 0 1.5rem 0;
+      text-align: center;
+    }
+    hr {
+      padding:0;
+      margin:0 auto 1rem auto;
+    }
+    ul {
+      h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+      }
+    }
+    .white-block {
+      background: $white;
+      box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.5);
+      width:50%;
+      float:right;
+      padding:3rem;
+      p, h1, h2, h3, h4, h5, h6 {
+        color: $foppen-grey;
+        text-align: left;
+      }
+
+
+
+      hr {
+        border: 1px solid $foppen-lightgrey;
+        margin:1rem 0 1rem 0;
+        width:20%;
+      }
+    }
+  }
+  .givespace {
+    margin-bottom:5rem;
+  }
+
+  p {
+    line-height:2;
+    margin:2rem 0 2rem 0;
+  }
+}

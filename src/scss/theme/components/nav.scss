@@ -1,0 +1,64 @@
+
+nav {
+  margin-top:-2%;
+  background: url("https://killing.is-serious.business/2263ea.png") repeat-x center center;
+  position: relative;
+  z-index:1;
+  ul {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0; //Override Bootstrap margins
+    padding:0; //Override Bootstrap paddings
+  }
+  ul li a:hover {
+    .submenu { display:block; }
+  }
+  ul li a {
+    display:block;
+    padding:6rem 3rem 6rem 3rem;
+    color:$white;
+    text-decoration:none;
+    ul i {
+      margin-left:1.7rem;
+    }
+    &:hover {
+      color:$foppen-red;
+      text-decoration:none;
+    }
+    &.menu-item-has-children::after {
+      margin-left:1.5rem;
+      display:inline-block;
+      font-family:"FontAwesome";
+      content:"\f107";
+    }
+  }
+  ul li {
+    color:$white;
+    font-family:MuseoBold;
+    text-transform: uppercase;
+    font-size:1.2rem;
+    cursor:pointer;
+    &::before {
+      content: "";
+    }
+    &:last-child {
+      margin-bottom:1rem;
+    }
+  }
+}
+.small-nav {
+  position:fixed;
+  top:0;
+  left:0;
+  background-image: url("https://killing.is-serious.business/2263ea.png");
+  background-size: cover;
+  background-position: 0 -60px;
+  background-repeat:no-repeat;
+  margin:0;
+  margin-top:-2%;
+  ul {
+    margin-top:-25px;
+  }
+}

@@ -1,19 +1,91 @@
+doctype html
 html
   head
-    meta(charset='utf-8')
+    title Foppen
+    meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title test
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css')
-    link(rel='stylesheet', href='/css/main.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no')
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    link(rel="stylesheet" href="/css/index.css")
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    script(src="https://raw.githubusercontent.com/TriggerRimfire/parallax.js/master/parallax.js")
+    script(src="/js/index.js")
   body
-    section#blocks
-      div.block(data-id="0")
-      div.block(data-id="2")
-      div.block(data-id="3")
-      div.block(data-id="4")
-      div.block(data-id="5")
-      div.block(data-id="6")
-      div.block(data-id="6")
-      canvas#canvas-home(data-id='canvas')
-  script(src='./js/bundle.js')
+    div.container
+      header.parallax-window(data-parallax="scroll" data-image-src="https://killing.is-serious.business/9bee1d.png")
+       img(src="https://killing.is-serious.business/bdeda6.png")
+      div.nav-before
+      nav
+       ul
+        li
+         a.menu-item-has-children(href="#") Our story
+          ul.submenu
+           i.fa.fa-caret-up(aria-hidden="true")
+           li item
+           li item2
+           li moreitems
+         //- TODO
+            Put ul/li list in here, for dropdown submenu
+            also TODO mess it up the first time
+        li
+         a.menu-item-has-children(href="#") What we do
+          ul.submenu
+            i.fa.fa-caret-up(aria-hidden="true")
+            li item
+            li item2
+            li moreitems
+            li item2
+            li moreitems
+        li
+         a.menu-item-has-children(href="#") Our icons
+          ul.submenu
+            i.fa.fa-caret-up(aria-hidden="true")
+            li item
+            li item2
+        li
+         a(href="#") Contact
+        li
+         a(href="#") Corporate
+      section.blocks-4.row.row-centered
+       div.menu-block.col-lg-2.col-sm-4.col-centered.menu-item-has-children
+        img(src="https://killing.is-serious.business/503900.png")
+        h3 Salmon
+        ul.submenu
+          i.fa.fa-caret-up(aria-hidden="true")
+          li item
+          li item2
+          li moreitems
+          li item2
+          li moreitems
+       div.menu-block.col-lg-2.col-sm-4.col-centered
+        img(src="https://killing.is-serious.business/503900.png")
+        h3 Concepts
+       div.menu-block.col-lg-2.col-sm-4.col-centered
+        img(src="https://killing.is-serious.business/503900.png")
+        h3 Seafood
+       div.menu-block.col-lg-2.col-sm-4.col-centered
+        img(src="https://killing.is-serious.business/503900.png")
+        h3 Smokedfish
+      section.image-section-content.row.bg1.parallax-window(data-parallax="scroll" data-image-src="https://killing.is-serious.business/b26fdd.png")
+       h1 Our story
+       section.image-section-content-inner
+        article
+         p Smoking fish since 1918. We can literally say that we are proud experts. We use this expertise to provide you with the best products. Always, everywhere and for every occasion. Smoked fish that is mouth watering and tickles your taste buds with every bite! That is Foppen. Tradition in taste.
+         a(href="#") Meer informatie
+      div.section-before
+      section.image-section-content.row.bg2.parallax-window(data-parallax="scroll" data-image-src="https://killing.is-serious.business/f206cd.png")
+       h1 Responsibility
+       section.image-section-content-inner
+        article
+         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper mauris quis justo bibendum accumsan. Mauris vestibulum nibh ac eros suscipit aliquam. Maecenas malesuada nibh quis mauris aliquam, eget sollicitudin purus aliquam. Sed scelerisque ac dui in aliquam. Nulla vitae ante est. Phasellus varius nisl neque, sit amet ullamcorper ipsum feugiat sed. Pellentesque ut hendrerit enim, non imperdiet eros. Donec ac ornare ex, sit amet laoreet nisi. Donec convallis felis ut    ligula   placerat, quis sodales metus sollicitudin. Aenean lobortis metus ac sagittis sagittis. Donec dignissim erat mauris, facilisis pulvinar enim aliquet in.
+         a(href="#") Meer informatie
+      footer
+       section.map
+       section.text
+        img(src="https://killing.is-serious.business/bdeda6.png")
+        ul
+         li Daltonstraat 34
+         li 3846 BX Harderwijk
+         li 0341 412 696
+         li Info@Foppen.nl
+        p Copyright Foppen All rights reserved

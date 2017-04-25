@@ -1,0 +1,30 @@
+footer {
+  margin-top:5%; //pull it back up
+  color:$foppen-lightgrey;
+}
+
+.map {
+  width:100%;
+  min-height:100vh;
+  background-image: url("https://killing.is-serious.business/0ddaf4.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+.text { //TODO figure out a better name for this class
+  width:100%;
+  text-align:center;
+  img {
+    width:10%;
+  }
+  p {
+    margin-top:10%;
+  }
+  ul li {
+    color:$foppen-lightgrey;
+    font-family:Museo; //TODO put this in typography kthx
+    &::before {
+      content:"";
+    }
+  }
+}

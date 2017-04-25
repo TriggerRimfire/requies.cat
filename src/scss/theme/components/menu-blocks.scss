@@ -1,0 +1,42 @@
+
+.blocks-4 {
+  margin:0; //reset bootstrap
+  padding:5rem 0;
+  width:100%;
+  position: relative;
+}
+
+.menu-block {
+  box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.5);
+  padding:0; //reset bootstrap
+  margin:2rem;
+  text-transform:uppercase;
+  cursor:pointer;
+  border:2px solid transparent;
+  &:hover {
+    border:2px solid $foppen-red;
+  }
+  img {
+    width:100%;
+  }
+  h3 {
+    background-image:url("https://killing.is-serious.business/664db0.png");
+    background-size:cover;
+    color:$white;
+    width:100%;
+    text-align:center;
+    padding:1.5rem 2rem;
+    font-size:1.6rem;
+    margin:0; //reset bootstrap
+  }
+  .submenu {
+    margin:0;
+    margin-top:5px;
+    position: absolute;
+    width:100%;
+    z-index:2;
+  }
+  &:hover {
+    .submenu { display:block; }
+  }
+}

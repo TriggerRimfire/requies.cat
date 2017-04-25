@@ -1,0 +1,44 @@
+header {
+  position: relative;
+  h1, h2, h3, h4, h5, h6 {
+    color:$white;
+  }
+  h3 {
+    font-family:Museo;
+    font-weight: 300;
+    margin-top:0;
+  }
+  hr {
+    margin-bottom:3rem;
+  }
+  p {
+    width:50%;
+    line-height:2rem;
+    text-align:center;
+    font-size:1.15rem;
+  }
+  img {
+    width:25%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
+
+  img.small-logo {
+    width:12.5%;
+  }
+}
+
+.small-header {
+  background-image:url("https://killing.is-serious.business/d11a21.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:50vh;
+  img {
+    margin-top:4%;
+  }
+}
